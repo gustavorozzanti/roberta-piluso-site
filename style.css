@@ -136,3 +136,5 @@ fieldset.choices legend{font-size:.88rem;font-weight:600;color:var(--plum);margi
 label.chk{display:flex;align-items:center;gap:10px;font-weight:500;color:var(--ink);font-size:.95rem;padding:10px 14px;border:1px solid #d9c6e8;border-radius:10px;background:var(--cream);cursor:pointer}
 label.chk:has(input:checked){border-color:var(--plum-2);background:var(--lilac-soft)}
 label.chk input{width:18px;height:18px;padding:0;accent-color:var(--plum-2);flex:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.hint.ok{color:#2a7a4b;font-weight:600}
