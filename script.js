@@ -22,7 +22,8 @@ form.addEventListener("submit", e => {
   const lines = [form.dataset.intro || "Olá, Roberta!"];
   form.querySelectorAll("label").forEach(l => {
     const field = l.querySelector("input,select,textarea");
-    const v = field && field.value.trim();
+    let v = field && field.value.trim();
+    if (v && field.type === "date") v = v.split("-").reverse().join("/");
     if (v) lines.push(`${l.firstChild.textContent.trim()}: ${v}`);
   });
   if (!WHATSAPP) {

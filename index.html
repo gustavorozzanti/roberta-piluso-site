@@ -200,7 +200,33 @@
           <option>Outro / sob medida</option>
         </select>
       </label>
-      <label>Data e formato previstos<input name="data" placeholder="Ex.: março, presencial, 150 pessoas"></label>
+      <label>Data prevista<input type="date" name="data"></label>
+      <label>Público
+        <select name="publico">
+          <option>Alta liderança / diretoria</option>
+          <option>Gestores e lideranças intermediárias</option>
+          <option>RH, pessoas e cultura</option>
+          <option>Todos os colaboradores</option>
+          <option>Evento setorial / associação / congresso</option>
+          <option>Outro</option>
+        </select>
+      </label>
+      <label>Formato
+        <select name="formato">
+          <option>Palestra de abertura (keynote)</option>
+          <option>Workshop para lideranças</option>
+          <option>Mesa ou painel</option>
+          <option>Treinamento in company</option>
+          <option>Ainda não sei, quero uma sugestão</option>
+        </select>
+      </label>
+      <label>Modalidade
+        <select name="modalidade">
+          <option>Presencial</option>
+          <option>Online</option>
+          <option>Híbrido</option>
+        </select>
+      </label>
       <label>Mensagem<textarea name="msg" rows="3"></textarea></label>
       <button class="btn" type="submit">Enviar pelo WhatsApp</button>
       <p class="hint" id="hint"></p>
