@@ -129,3 +129,10 @@ footer{background:var(--ink);color:#cbbfd6;padding:26px 0;font-size:.9rem}
 .link{color:var(--plum-2);font-weight:600}
 @media(max-width:960px){.areas4{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}}
 @media(max-width:720px){.areas4{grid-template-columns:1fr}}
+
+/* multi-seleção */
+fieldset.choices{border:0;display:grid;gap:8px;min-width:0}
+fieldset.choices legend{font-size:.88rem;font-weight:600;color:var(--plum);margin-bottom:8px;padding:0}
+label.chk{display:flex;align-items:center;gap:10px;font-weight:500;color:var(--ink);font-size:.95rem;padding:10px 14px;border:1px solid #d9c6e8;border-radius:10px;background:var(--cream);cursor:pointer}
+label.chk:has(input:checked){border-color:var(--plum-2);background:var(--lilac-soft)}
+label.chk input{width:18px;height:18px;padding:0;accent-color:var(--plum-2);flex:none}

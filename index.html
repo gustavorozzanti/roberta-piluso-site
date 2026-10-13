@@ -189,17 +189,16 @@
     <form id="form" data-intro="Olá, Roberta! Tenho interesse em uma palestra para minha empresa." novalidate>
       <label>Nome<input name="nome" required autocomplete="name"></label>
       <label>Empresa ou instituição<input name="empresa" autocomplete="organization"></label>
-      <label>Tema de interesse
-        <select name="tema">
-          <option>Cuidado como valor organizacional</option>
-          <option>Direitos humanos e empresas</option>
-          <option>Mulheres, maternidade e carreira</option>
-          <option>Inclusão da pessoa com deficiência</option>
-          <option>Liderança que cuida</option>
-          <option>Envelhecimento e cuidado familiar</option>
-          <option>Outro / sob medida</option>
-        </select>
-      </label>
+      <fieldset class="choices" data-required="1">
+        <legend>Temas de interesse (marque quantos quiser)</legend>
+        <label class="chk"><input type="checkbox" name="tema" value="Cuidado como valor organizacional"><span>Cuidado como valor organizacional</span></label>
+        <label class="chk"><input type="checkbox" name="tema" value="Direitos humanos e empresas"><span>Direitos humanos e empresas</span></label>
+        <label class="chk"><input type="checkbox" name="tema" value="Mulheres, maternidade e carreira"><span>Mulheres, maternidade e carreira</span></label>
+        <label class="chk"><input type="checkbox" name="tema" value="Inclusão da pessoa com deficiência"><span>Inclusão da pessoa com deficiência</span></label>
+        <label class="chk"><input type="checkbox" name="tema" value="Liderança que cuida"><span>Liderança que cuida</span></label>
+        <label class="chk"><input type="checkbox" name="tema" value="Envelhecimento e cuidado familiar"><span>Envelhecimento e cuidado familiar</span></label>
+        <label class="chk"><input type="checkbox" name="tema" value="Outro / sob medida"><span>Outro / sob medida</span></label>
+      </fieldset>
       <label>Data prevista<input type="date" name="data"></label>
       <label>Público
         <select name="publico">

@@ -147,15 +147,13 @@
     </div>
     <form id="form" data-intro="Olá, Roberta! Tenho interesse na mentoria jurídica." novalidate>
       <label>Nome<input name="nome" required autocomplete="name"></label>
-      <label>Área de interesse
-        <select name="area">
-          <option>Direito Constitucional (OAB)</option>
-          <option>Direitos Humanos</option>
-          <option>Orientação de TCC e artigos</option>
-          <option>Inglês jurídico</option>
-          <option>Mais de uma área</option>
-        </select>
-      </label>
+      <fieldset class="choices" data-required="1">
+        <legend>Áreas de interesse (marque quantas quiser)</legend>
+        <label class="chk"><input type="checkbox" name="area" value="Direito Constitucional (OAB)"><span>Direito Constitucional (OAB)</span></label>
+        <label class="chk"><input type="checkbox" name="area" value="Direitos Humanos"><span>Direitos Humanos</span></label>
+        <label class="chk"><input type="checkbox" name="area" value="Orientação de TCC e artigos"><span>Orientação de TCC e artigos</span></label>
+        <label class="chk"><input type="checkbox" name="area" value="Inglês jurídico"><span>Inglês jurídico</span></label>
+      </fieldset>
       <label>Seu momento
         <select name="momento">
           <option>Aluno(a) de graduação</option>

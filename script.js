@@ -20,7 +20,12 @@ form.addEventListener("submit", e => {
   const hint = document.getElementById("hint");
   if (!form.elements.nome.value.trim()) { hint.textContent = "Informe seu nome."; return; }
   const lines = [form.dataset.intro || "Olá, Roberta!"];
-  form.querySelectorAll("label").forEach(l => {
+  for (const fs of form.querySelectorAll("fieldset.choices")) {
+    const picked = [...fs.querySelectorAll("input:checked")].map(i => i.value);
+    if (fs.dataset.required && !picked.length) { hint.textContent = "Marque ao menos uma opção em \"" + fs.querySelector("legend").textContent.split(" (")[0] + "\"."; return; }
+    if (picked.length) lines.push(`${fs.querySelector("legend").textContent.split(" (")[0]}: ${picked.join("; ")}`);
+  }
+  form.querySelectorAll(":scope > label").forEach(l => {
     const field = l.querySelector("input,select,textarea");
     let v = field && field.value.trim();
     if (v && field.type === "date") v = v.split("-").reverse().join("/");
